@@ -45,4 +45,9 @@ public class CooldownPlugin extends JavaPlugin {
 		}
 		return null;
 	}
+
+	public static void addCooldown(Player p, int ticks) {
+		Cooldown c = new Cooldown(p, ticks);
+		clist.add(c);
+	}
 }
