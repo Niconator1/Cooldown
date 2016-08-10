@@ -35,4 +35,14 @@ public class CooldownPlugin extends JavaPlugin {
 		}
 		return false;
 	}
+
+	public static Cooldown getCooldown(Player p) {
+		for (int i = 0; i < clist.size(); i++) {
+			Cooldown c = clist.get(i);
+			if (c.getPlayer().getUniqueId().compareTo(p.getUniqueId()) == 0) {
+				return c;
+			}
+		}
+		return null;
+	}
 }
